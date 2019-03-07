@@ -1,0 +1,62 @@
+{
+  "package": "vertragmf.adcubum.com",
+  "source_repo": "",
+  "major_version": "0",
+  "description": "Service Definitonen für das Modul Vertrag MF",
+  "__mid": {
+    "imports": [
+    ]
+  },
+  "__proto": {
+    "imports": [
+      "google/api/annotations.proto",
+      "google/protobuf/timestamp.proto",
+      "github.com/gogo/protobuf/gogoproto/gogo.proto",
+      "google/protobuf/empty.proto"
+    ],
+    "options": [
+      {
+        "key": "go_package",
+        "value": "task"
+      }
+    ]
+  },
+  "services": [
+    {
+      "name": "VertragService",
+      "description": "Manages contracts",
+      "methods": [
+        {
+          "name": "CreateContract",
+          "description": "",
+          "input_type": "CreateContractRequest",
+          "output_type": "ContractEntity"
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "Contract",
+      "description": "Ein einzelner Vertrag",
+      "fields": [
+        {
+          "name": "id",
+          "description": "ulid des Tasks",
+          "type": "ulid",
+          "__proto": {
+            "type": "string",
+            "number": 1,
+            "options": [
+              {
+                "name": "gogoproto.moretags",
+                "key": "db",
+                "value": "id,pk,omitempty"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

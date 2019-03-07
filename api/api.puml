@@ -1,0 +1,159 @@
+@startuml
+
+title contract mgmt composite
+
+skinparam class {
+	BackgroundColor white
+	ArrowColor #03a9f4
+	BorderColor #f3f3f3
+}
+skinparam classBackgroundColor #F1F1F1
+skinparam classBorderColor black
+
+class " root.v1 " as root_v1 << (R, #B00020) >> {
+    --Description--
+    API entry point contract composite
+}
+
+class " vertraege.v1 " as vertraege_v1 << (R,#03a9f4) >> {
+   .. methods ..
+   + list
+   + get
+   + update
+   + delete
+   + :freigeben
+
+   -- fields --
+   - display_name string
+   + vertragId string
+   + fachlicheGueltigkeit FachlicheGueltigkeit
+   + zustand Zustand
+   + versicherungsnehmer Versicherungsnehmer
+   + hauptverfallTag int
+   + hautpverfallMonat int
+   + isHauptverfallUebersteuert bool
+   + zahlweise string
+   + zusatzAttribute []Property
+   + vertragNr string
+   + produktId string
+   + ablaufDatum date
+   + naechsterKuendigungstermin date
+   + geschaeftsbereich string
+
+   --Description--
+    contract head information
+    entity {:cnt}
+}
+
+class " vertragsteile.v1 " as vertragsteile_v1 << (R,#03a9f4) >>  {
+   .. methods ..
+     + list
+     + get
+     + create
+     + update
+     + delete
+
+   -- fields --
+     - display_name string
+     + fachlicheGueltigkeit FachlicheGueltigkeit
+     + zustand Zustand
+     + vertragsteilNr string
+     + produktteilId string
+     + vertragsteilId string
+     + zusatzAttribute []Property
+
+   --Description--
+     contract parts
+     entity {:cpt}
+}
+
+class " versicherteobjekte.v1 " as versicherteobjekte_v1 << (R,#03a9f4) >>  {
+   .. methods ..
+     + list
+     + get
+     + create
+     + update
+     + delete
+
+   -- fields --
+     - display_name string
+     + fachlicheGueltigkeit FachlicheGueltigkeit
+     + zustand Zustand
+     + versObjNr string
+     + versObjTyp string
+     + versObjId string
+     + zusatzAttribute []Property
+
+   --Description--
+     Repräsentiert das versicherte Objekt
+     entity {:vso}
+}
+
+class " deckungsbuendel.v1 " as deckungsbuendel_v1 << (R,#03a9f4) >>  {
+   .. methods ..
+     + list
+     + get
+     + create
+     + update
+     + delete
+
+   -- fields --
+     - display_name string
+     + fachlicheGueltigkeit FachlicheGueltigkeit
+     + zustand Zustand
+     + deckungsbuendelNr string
+     + deckungsbuendelId string
+     + zusatzAttribute []Property
+
+   --Description--
+     Ein Deckungsbündel beinhaltet
+     vorkonfigurierte Deckungen
+     entity {:dbl}
+}
+
+class " deckungen.v1 " as deckungen_v1 << (R,#03a9f4) >>  {
+   .. methods ..
+     + list
+     + get
+     + create
+     + update
+     + delete
+
+   -- fields --
+     - display_name string
+     + fachlicheGueltigkeit FachlicheGueltigkeit
+     + zustand Zustand
+     + zusatzAttribute []Property
+     + sollPreis money
+     + istPreis money
+     + selbstbehalt int
+     + tarifversion string
+     + isTarifversionUebersteuert bool
+     + deckungNr string
+     + technischerBeginn date
+     + fachlicherBeginn date
+     + abweichenderFachlicherBeginn date
+     + antragsdatum date
+     + zeichnungsdatum date
+     + abschlussgrund string
+     + materiellerBeginn date
+     + deckungsId string
+
+   --Description--
+     Deckungsinformationen
+     entity {:dck}
+}
+
+
+
+root_v1 o-- deckungsbuendel_v1
+root_v1 o-- versicherteobjekte_v1
+root_v1 o-- deckungen_v1
+root_v1 o-- vertraege_v1
+
+vertraege_v1 --o vertragsteile_v1
+vertragsteile_v1 --o versicherteobjekte_v1
+versicherteobjekte_v1 o-- deckungsbuendel_v1
+deckungsbuendel_v1 o-- deckungen_v1
+
+@enduml
