@@ -1,0 +1,44 @@
+{
+  "name": "FachlicheGueltigkeit",
+  "mime": "application/vnd.com.adcubum.contractmgmt.fachlicheGueltigkeit+json",
+  "description": "HistFachObjekt",
+  "imports": [
+
+  ],
+  "fields": [
+    {
+      "name": "gueltigAb",
+      "description": "Startdatum fachliche Gültigkeit",
+      "type": "date",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false
+
+      },
+      "_options": [],
+      "toString": {"fields": ["gueltigAb"], "fmt": "%1"}
+    },
+    {
+      "name": "gueltigBis",
+      "description": "Enddatum fachliche Gültigkeit",
+      "type": "date",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false
+
+      },
+      "_options": [],
+      "toString": {"fields": ["gueltigBis"], "fmt": "%1"}
+    }
+  ]
+}

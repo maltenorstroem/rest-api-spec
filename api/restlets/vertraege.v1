@@ -1,0 +1,47 @@
+{
+  "general": {
+    "name": "vertraege.v1",
+    "description": "Repräsentiert einen Vertrag komposit",
+    "version": "1.0.0",
+    "lifecycle": {
+      "deprecated": false,
+      "info": "This version is still valid"
+    },
+    "x-route": "/api/v1/vertraege/:cnt"
+  },
+  "services": [
+    {
+      "name": "Create",
+      "method": "POST",
+      "href": "/api/v1/vertraege/",
+      "description": "creates a new contract composite",
+      "request": "",
+      "response": "",
+      "params": []
+    },
+    {
+      "name": "List",
+      "method": "GET",
+      "href": "/api/v1/vertraege/",
+      "description": "The List method takes a collection name and zero or more parameters as input, and returns a list of resources (response type definition) that match the input.",
+      "request": "",
+      "response": "application/vnd.com.adcubum.contractmgmt.vertrag+json",
+      "searchable": false,
+      "filterable": true,
+      "countable": false,
+      "params": ["orderBy", "fields", "filter"]
+    },
+    {
+      "name": "Get",
+      "method": "GET",
+      "href": "/api/v1/vertraege/{cnt}",
+      "description": "The Get method takes a resource name, zero or more parameters, and returns the specified resource (response type definition).",
+      "request": "",
+      "response": "application/vnd.com.adcubum.contractmgmt.vertrag+json",
+      "searchable": false,
+      "filterable": false,
+      "countable": false,
+      "params": ["fields"]
+    }
+  ]
+}

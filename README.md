@@ -2,7 +2,7 @@
 
 ## API Design Guidelines
 * [Guidelines](https://cloud.google.com/apis/design/)
-* [Resource Oriented Desing](https://cloud.google.com/apis/design/resources)
+* [Resource Oriented Design](https://cloud.google.com/apis/design/resources)
 
 ## DSL to describe the API
 depending on: [Wir arbeiten mit dem Contract First Ansatz (Anbindung Business Web UI](https://confluence.adcubum.com/pages/viewpage.action?pageId=114866048)
@@ -27,4 +27,8 @@ depending on: [Wir arbeiten mit dem Contract First Ansatz (Anbindung Business We
 
 # Resources
 
-![alt text](api/api.svg "")
+![api contract mgmt composite](docs/api.svg)
+
+# Type definitions
+
+[types](api/types.json)

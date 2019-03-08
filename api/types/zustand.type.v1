@@ -1,0 +1,61 @@
+{
+  "name": "Zustand",
+  "mime": "application/vnd.com.adcubum.contractmgmt.zustand+json",
+  "description": "State",
+  "imports": [
+
+  ],
+  "fields": [
+    {
+      "name": "von",
+      "description": "Startdatum",
+      "type": "date",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false
+
+      },
+      "_options": [],
+      "toString": {"fields": ["von"], "fmt": "%1"}
+    },
+    {
+      "name": "bis",
+      "description": "Enddatum",
+      "type": "date",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false
+
+      },
+      "_options": [],
+      "toString": {"fields": ["gueltigBis"], "fmt": "%1"}
+    },
+    {
+      "name": "beschreibung",
+      "description": "Label des Zustandes",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false
+
+      },
+      "_options": [],
+      "toString": {"fields": ["beschreibung"], "fmt": "%1"}
+    }
+  ]
+}

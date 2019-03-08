@@ -1,0 +1,59 @@
+{
+  "general": {
+    "name": "vertragsteile.v1",
+    "description": "Repräsentiert ein Vertragsteil zu einem Vertrag",
+    "version": "1.0.0",
+    "lifecycle": {
+      "deprecated": false,
+      "info": "This version is still valid"
+    },
+    "x-route": "/api/v1/vertraege/:cnt/vertragsteile/:cpt"
+  },
+  "services": [
+    {
+      "name": "Create",
+      "method": "POST",
+      "href": "/api/v1/vertraege/{cnt}/vertragsteile",
+      "description": "adds a new contract part to a contract",
+      "request": "application/vnd.com.adcubum.contractmgmt.vertragsteil+json",
+      "response": "application/vnd.com.adcubum.contractmgmt.vertragsteil+json",
+      "params": []
+    },
+    {
+      "name": "List",
+      "method": "GET",
+      "href": "/api/v1/vertraege/{cnt}/vertragsteile",
+      "description": "The List method takes a collection name and zero or more parameters as input, and returns a list of resources (response type definition) that match the input.",
+      "request": "",
+      "response": "application/vnd.com.adcubum.contractmgmt.vertragsteil+json",
+      "searchable": false,
+      "filterable": true,
+      "countable": false,
+      "params": ["orderBy", "fields"]
+    },
+    {
+      "name": "Get",
+      "method": "GET",
+      "href": "/api/v1/vertraege/{cnt}/vertragsteile/{cpt}",
+      "description": "The Get method takes a resource name, zero or more parameters, and returns the specified resource (response type definition).",
+      "request": "",
+      "response": "application/vnd.com.adcubum.contractmgmt.vertragteil+json",
+      "searchable": false,
+      "filterable": false,
+      "countable": false,
+      "params": ["fields"]
+    },
+    {
+      "name": "Delete",
+      "method": "DELETE",
+      "href": "/api/v1/vertraege/{cnt}/vertragsteile/{cpt}",
+      "description": "removes a contract part form a specific contract",
+      "request": "",
+      "response": "",
+      "searchable": false,
+      "filterable": false,
+      "countable": false,
+      "params": []
+    }
+  ]
+}

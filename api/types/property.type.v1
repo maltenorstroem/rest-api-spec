@@ -1,0 +1,9 @@
+{
+  "name": "Property",
+  "mime": "application/vnd.com.adcubum.contractmgmt.property+json",
+  "description": "ParamAttr",
+  "imports": [
+
+  ],
+  "fields": []
+}

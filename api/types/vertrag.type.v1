@@ -1,0 +1,347 @@
+{
+  "name": "Vertrag",
+  "mime": "application/vnd.com.adcubum.contractmgmt.vertrag+json",
+  "description": "Vertrag komposit",
+  "imports": [
+    "application/vnd.com.adcubum.contractmgmt.fachlicheGueltigkeit+json",
+    "application/vnd.com.adcubum.contractmgmt.zustand+json",
+    "application/vnd.com.adcubum.contractmgmt.property+json"
+  ],
+  "fields": [
+    {
+      "name": "vertragId",
+      "description": "ulid des Vertrages",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "vertragId"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "vertragNummer",
+      "description": "Nummer des Vertrages",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "vertragNummer"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "produktId",
+      "description": "ProduktId des Vertrages",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "produktId"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "display_name",
+      "description": "String representation of the resource",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": true
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "display_name"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "fachlicheGueltigkeit",
+      "description": "Functinal scope of the contract",
+      "type": "application/vnd.com.adcubum.fachlicheGueltigkeit+json",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "gueltigAb",
+          "gueltigBis"
+        ],
+        "fmt": "%1 - %2"
+      }
+    },
+    {
+      "name": "zustand",
+      "description": "technical state",
+      "type": "application/vnd.com.adcubum.zustand+json",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "von",
+          "bis",
+          "beschreibung"
+        ],
+        "fmt": "%1 - %2 : %3"
+      }
+    },
+    {
+      "name": "versicherungsnehmer",
+      "description": "Versicherungsnehmer des Vertrages",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "versicherungsnehmer"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "hauptverfallTag",
+      "description": "hauptverfallTag des Vertrages",
+      "type": "int",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "hauptverfallTag"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "hauptverfallMonat",
+      "description": "hauptverfallMonat des Vertrages",
+      "type": "int",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "hauptverfallMonat"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "isHauptverfallUebersteuert",
+      "description": "Ist der Hauptverfall übersteuert",
+      "type": "bool",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "isHauptverfallUebersteuert"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "zahlweise",
+      "description": "Zahlweise des Vertrages",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "zahlweise"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "ablaufDatum",
+      "description": "Ablaufdatum des Vertrages",
+      "type": "date",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "ablaufDatum"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "naechsterKuendigungstermin",
+      "description": "Nächster Kündigungstermin des Vertrages",
+      "type": "date",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "naechsterKuendigungstermin"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "geschaeftsbereich",
+      "description": "Geschäftsbereich des Vertrages",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "geschaeftsbereich"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "zusatzAttribute",
+      "description": "Dynamische Attribute des Vertrages",
+      "type": "application/vnd.com.adcubum.contractmgmt.property+json",
+      "_meta": {
+        "default": "",
+        "repeated": true,
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "key",
+          "value"
+        ],
+        "fmt": "%1: %2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "name": "Vertragsteil",
+  "mime": "application/vnd.com.adcubum.contractmgmt.vertragsteil+json",
+  "description": "Vertragsteil",
+  "imports": [
+    "application/vnd.com.adcubum.contractmgmt.fachlicheGueltigkeit+json",
+    "application/vnd.com.adcubum.contractmgmt.zustand+json"
+  ],
+  "fields": [
+    {
+      "name": "vertragsteilId",
+      "description": "ulid des Vertragteils",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false
+
+      },
+      "_options": [],
+      "toString": {"fields": ["vertragsteilId"], "fmt": "%1"}
+    },
+    {
+      "name": "display_name",
+      "description": "String representation of the resource",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": true
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "display_name"
+        ],
+        "fmt": "%1"
+      }
+    },
+    {
+      "name": "vertragsteilNummer",
+      "description": "Nummer des Vertragteils",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false
+
+      },
+      "_options": [],
+      "toString": {"fields": ["vertragsteilNummer"], "fmt": "%1"}
+    },
+    {
+      "name": "produktteilId",
+      "description": "ProduktteilId des Vertragteils",
+      "type": "string",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false
+
+      },
+      "_options": [],
+      "toString": {"fields": ["produktteilId"], "fmt": "%1"}
+    },
+    {
+      "name": "fachlicheGueltigkeit",
+      "description": "Functinal scope of the contract",
+      "type": "application/vnd.com.adcubum.fachlicheGueltigkeit+json",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "gueltigAb",
+          "gueltigBis"
+        ],
+        "fmt": "%1 - %2"
+      }
+    },
+    {
+      "name": "zustand",
+      "description": "technical state",
+      "type": "application/vnd.com.adcubum.zustand+json",
+      "_meta": {
+        "default": "",
+        "hint": ""
+      },
+      "_constraints": {
+        "min": null,
+        "max": null,
+        "mandatory": false,
+        "readonly": false
+      },
+      "_options": [],
+      "toString": {
+        "fields": [
+          "von",
+          "bis",
+          "beschreibung"
+        ],
+        "fmt": "%1 - %2 : %3"
+      }
+    }
+  ]
+}
