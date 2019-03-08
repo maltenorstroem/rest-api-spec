@@ -5,7 +5,7 @@
 * [Resource Oriented Design](https://cloud.google.com/apis/design/resources)
 
 ## DSL to describe the API
-depending on: [Wir arbeiten mit dem Contract First Ansatz (Anbindung Business Web UI](https://confluence.adcubum.com/pages/viewpage.action?pageId=114866048)
+depending on: contract first approach
 
 ## Objectives
 * Gain insight into the API structure
