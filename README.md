@@ -31,7 +31,7 @@
 ### Create a new SPEC Project
 
 ```
-git clone ssh://git@git.devres.internal.adcubum.com:7999/ewf/meta-spec-restapi.git [YOUR_NAME]
+git clone ...
 ```
 
 ### Generating documentation // only needed if you run it locally
@@ -101,23 +101,3 @@ or use
 ```
 
 ---
-
-## NPM Package 
-
-registry: http://artifact.devres.internal.adcubum.com/artifactory/api/npm/npm-local/
-
-### Publish package
-
-You need the login credentials (.npmrc base64 decode).
-* Silent login will follow
-* Auto Tag will follow
-
-```
-./scripts/publishToNPM.sh
-```
-
-### Install package
-
-This repository can be installed with the following command:
-
-npm i @adcubum/[YOUR_NAME]
